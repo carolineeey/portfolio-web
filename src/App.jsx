@@ -1,9 +1,12 @@
-import './App.css'
+import './App.css';
+import Profile from './sections/profile/profile';
 
 function App() {
   return (
-    <>App</>
-  )
+    <>
+      <Profile />
+    </>
+  );
 }
 
-export default App
+export default App;
