@@ -3,9 +3,7 @@ import Profile from './sections/profile/profile';
 
 function App() {
   return (
-    <>
-      <Profile />
-    </>
+    <> <Profile />  </>
   );
 }
 
