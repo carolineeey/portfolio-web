@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    height: 100dvh;
+    min-height: 500px;
+
+    .profile {
+        max-width: 200px;
+    }
+
+    span {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+
+        a {
+            margin: 0;
+
+            img {
+                width: 30px;
+            }
+        }
+    }
+
+    a {
+        width: fit-content;
+        align-self: center;
+    }
+
+    button {
+        background-color:  var(--btn-color);
+        color: var(--btn-texrt-color);
+        border: none;
+        border-radius: 20px;
+        width: 126px;
+    }
+}
