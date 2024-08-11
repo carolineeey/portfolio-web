@@ -3,6 +3,7 @@ import Profile from './sections/profile/profile';
 import Projects from './sections/projects/projects'
 import Skills from './sections/skills/skills'
 import Contact from './sections/contact/contact';
+import Footer from './sections/footer/footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Projects /> 
       <Skills />
       <Contact />
+      <Footer />
     </>
   );
 }
