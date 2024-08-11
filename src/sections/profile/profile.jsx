@@ -1,5 +1,5 @@
 import styles from './profileStyles.module.css';
-import profileImg from '../../assets/hero-img.png';
+import profileImg from '../../assets/prf.png';
 import sun from '../../assets/sun.svg';
 import moon from '../../assets/moon.svg';
 import twitterLight from '../../assets/twitter-light.svg';
