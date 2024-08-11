@@ -32,7 +32,7 @@
 
     button {
         background-color:  var(--btn-color);
-        color: var(--btn-texrt-color);
+        color: var(--btn-text-color);
         border: none;
         border-radius: 20px;
         width: 126px;
