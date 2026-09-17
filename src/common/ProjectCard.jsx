@@ -1,11 +1,16 @@
-import React from 'react'
+import styles from './projectCardStyles.module.css';
 
 export default function ProjectCard({ src, link, h3, p }) {
   return (
-    <a href={link} target="_blank">
-        <img className="hover" src={src} alt={`${h3} logo`}/>
-        <h3>{h3}</h3>
-        <p>{p}</p>
+    <a className={styles.card} href={link} target="_blank" rel="noopener noreferrer">
+        <div className={styles.media}>
+            <img src={src} alt={`${h3} logo`}/>
+        </div>
+        <div className={styles.body}>
+            <h3>{h3}</h3>
+            <p>{p}</p>
+        </div>
+        <span className={styles.arrow} aria-hidden="true">&#8599;</span>
     </a>
   )
 }

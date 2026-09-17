@@ -4,32 +4,33 @@ import checkMarkIconLight from '../../assets/checkmark-light.svg'
 import SkillList from '../../common/SkillList'
 import { useTheme } from '../../common/ThemeContext';
 
-export default function skills() {
-  const { theme, toggleTheme } = useTheme();
+const skillGroups = [
+  { title: 'Web & Mobile', skills: ['HTML', 'CSS', 'Javascript', 'Dart'] },
+  { title: 'Languages', skills: ['Python', 'Go', 'C', 'Lua'] },
+  { title: 'Backend & Tools', skills: ['RESTful API', 'Microservice', 'Database', 'Git'] },
+];
+
+export default function Skills() {
+  const { theme } = useTheme();
   const checkMarkIcon = theme === 'light' ? checkMarkIconLight : checkMarkIconDark;
 
   return (
-    <section id="skills" className={styles.container}>
-        <h1 className="sectionTitle">Skills</h1>
-        <div className={styles.skillList}>
-            <SkillList src={checkMarkIcon} skill="HTML" />
-            <SkillList src={checkMarkIcon} skill="CSS" />
-            <SkillList src={checkMarkIcon} skill="Javascript" />
-            <SkillList src={checkMarkIcon} skill="Dart" />
+    <section id="skills">
+        <div className="sectionHeader">
+            <span className="eyebrow">What I work with</span>
+            <h2>Skills</h2>
         </div>
-        <hr />
-        <div className={styles.skillList}>
-            <SkillList src={checkMarkIcon} skill="Python" />
-            <SkillList src={checkMarkIcon} skill="Go" />
-            <SkillList src={checkMarkIcon} skill="C" />
-            <SkillList src={checkMarkIcon} skill="Lua" />
-        </div>
-        <hr />
-        <div className={styles.skillList}>
-            <SkillList src={checkMarkIcon} skill="RESTful API" />
-            <SkillList src={checkMarkIcon} skill="Microservice" />
-            <SkillList src={checkMarkIcon} skill="Database" />
-            <SkillList src={checkMarkIcon} skill="Git" />
+        <div className={styles.groups}>
+            {skillGroups.map(({ title, skills }) => (
+                <div key={title} className={styles.group}>
+                    <h3>{title}</h3>
+                    <div className={styles.skillList}>
+                        {skills.map((skill) => (
+                            <SkillList key={skill} src={checkMarkIcon} skill={skill} />
+                        ))}
+                    </div>
+                </div>
+            ))}
         </div>
     </section>
   )
