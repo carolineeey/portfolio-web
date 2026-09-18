@@ -7,6 +7,16 @@ import linkedinDark from '../../assets/linkedin-dark.svg';
 import CV from '../../assets/cv.pdf';
 import { useTheme } from '../../common/ThemeContext';
 
+// First developer role (PotatoBeans internship), used to keep the years of experience current.
+const CAREER_START = new Date(2023, 7, 1); // August 2023
+
+function yearsSince(start) {
+    const now = new Date();
+    let years = now.getFullYear() - start.getFullYear();
+    if (now.getMonth() < start.getMonth()) years -= 1;
+    return years;
+}
+
 function Profile() {
     const { theme } = useTheme();
 
@@ -25,9 +35,10 @@ function Profile() {
             <div className={styles.info}>
                 <span className="eyebrow">Hi, I&apos;m</span>
                 <h1>Esther Melia</h1>
-                <h2 className={styles.role}>Software Engineer</h2>
+                <h2 className={styles.role}>Software Developer</h2>
                 <p className={styles.description}>
-                    With a passion for developing modern web apps
+                    {yearsSince(CAREER_START)}+ years of software development experience.
+                    Currently building an authentication platform in Go, focusing on fraud prevention and mobile security.
                 </p>
                 <div className={styles.actions}>
                     <a className="btn" href={CV} download>

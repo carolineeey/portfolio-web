@@ -75,6 +75,21 @@
     transform: rotate(15deg);
 }
 
+/* Very narrow phones (e.g. iPhone SE 1st gen) need tighter links to fit. */
+@media (width < 360px) {
+    .actions {
+        gap: 6px;
+    }
+
+    .links {
+        gap: 8px;
+
+        a {
+            font-size: 12px;
+        }
+    }
+}
+
 @media (width >= 800px) {
     .nav {
         padding: 0 32px;

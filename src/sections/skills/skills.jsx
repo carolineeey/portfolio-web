@@ -5,9 +5,11 @@ import SkillList from '../../common/SkillList'
 import { useTheme } from '../../common/ThemeContext';
 
 const skillGroups = [
-  { title: 'Web & Mobile', skills: ['HTML', 'CSS', 'Javascript', 'Dart'] },
-  { title: 'Languages', skills: ['Python', 'Go', 'C', 'Lua'] },
-  { title: 'Backend & Tools', skills: ['RESTful API', 'Microservice', 'Database', 'Git'] },
+  { title: 'Security & R&D', skills: ['Frida', 'Fraud Pattern Analysis', 'Mobile Security', 'OTP Security', 'Device Fingerprinting'] },
+  { title: 'Languages', skills: ['Go', 'JavaScript', 'Dart', 'Python', 'HTML/CSS', 'C#', 'Lua'] },
+  { title: 'Frameworks', skills: ['Gorilla Mux', 'Vue.js', 'React Native', 'Node.js'] },
+  { title: 'Backend & Development', skills: ['RESTful APIs', 'Microservices', 'SQL', 'Unit & Integration Testing'] },
+  { title: 'Infrastructure', skills: ['Docker', 'Nomad', 'Linux', 'Git'] },
 ];
 
 export default function Skills() {
