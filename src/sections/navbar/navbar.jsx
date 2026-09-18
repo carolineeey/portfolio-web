@@ -15,6 +15,7 @@ function Navbar() {
                 <a href="#profile" className={styles.brand}>EM</a>
                 <div className={styles.actions}>
                     <ul className={styles.links}>
+                        <li><a href="#experience">Experience</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#contact">Contact</a></li>

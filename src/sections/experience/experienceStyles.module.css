@@ -1,0 +1,138 @@
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+    padding: 0 0 0 24px;
+    list-style: none;
+}
+
+/* Vertical line connecting the entries. */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 5px;
+    width: 2px;
+    border-radius: 2px;
+    background-color: var(--border);
+}
+
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Dot on the line for each entry. */
+.item::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -24px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--accent);
+    border-radius: 999px;
+    background-color: var(--bg);
+}
+
+.item:first-child::before {
+    background-color: var(--accent);
+}
+
+.period {
+    color: var(--text-subtle);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.company {
+    color: var(--accent);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.summary {
+    color: var(--text-subtle);
+    font-size: 14px;
+    font-style: italic;
+}
+
+.points {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 12px 0 0;
+    padding-left: 18px;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.55;
+
+    li::marker {
+        color: var(--accent);
+    }
+}
+
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+
+    span {
+        padding: 4px 12px;
+        border-radius: 999px;
+        background-color: var(--accent-soft);
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+
+@media (width >= 800px) {
+    .timeline {
+        gap: 28px;
+        padding-left: 0;
+    }
+
+    /* Period sits in its own column, with the line between it and the card. */
+    .timeline::before {
+        left: 183px;
+    }
+
+    .item {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 48px;
+    }
+
+    .item::before {
+        top: 8px;
+        left: 178px;
+    }
+
+    .period {
+        padding-top: 2px;
+        text-align: right;
+    }
+
+    .card {
+        padding: 24px 28px;
+    }
+}

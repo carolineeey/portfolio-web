@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './sections/navbar/navbar';
 import Profile from './sections/profile/profile';
+import Experience from './sections/experience/experience';
 import Projects from './sections/projects/projects'
 import Skills from './sections/skills/skills'
 import Contact from './sections/contact/contact';
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <main>
         <Profile />
+        <Experience />
         <Projects />
         <Skills />
         <Contact />
