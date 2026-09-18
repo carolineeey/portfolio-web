@@ -1,8 +1,4 @@
 import styles from './projectsStyle.module.css';
-import viberr from '../../assets/viberr.png';
-import freshBurger from '../../assets/fresh-burger.png'
-import hipsster from '../../assets/hipsster.png';
-import fitLift from '../../assets/fitlift.png';
 import codingBee from '../../assets/codingbee.png';
 import bmiChecker from '../../assets/bmi-checker.png';
 import ProjectCard from '../../common/ProjectCard';
@@ -25,10 +21,6 @@ const projectList = [
         year: '2020',
         description: 'Informational website about Body Mass Index with a built-in BMI calculator, made as a submission for a Dicoding course.',
     },
-    { src: viberr, link: 'https://github.com/', h3: 'Viberr', p: 'Streaming App' },
-    { src: freshBurger, link: 'https://github.com/', h3: 'Fresh Burger', p: 'Hamburger Restaurant' },
-    { src: hipsster, link: 'https://github.com/', h3: 'Hipsster', p: 'Glasses shop' },
-    { src: fitLift, link: 'https://github.com/', h3: 'FitLift', p: 'Fitness App' },
 ];
 
 function projects() {
