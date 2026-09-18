@@ -1,7 +1,5 @@
 import styles from './profileStyles.module.css';
 import profileImg from '../../assets/prf.png';
-import twitterLight from '../../assets/twitter-light.svg';
-import twitterDark from '../../assets/twitter-dark.svg';
 import githubLight from '../../assets/github-light.svg';
 import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
@@ -12,7 +10,6 @@ import { useTheme } from '../../common/ThemeContext';
 function Profile() {
     const { theme } = useTheme();
 
-    const twitterIcon = theme === 'light' ? twitterLight : twitterDark;
     const githubIcon = theme === 'light' ? githubLight : githubDark;
     const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
 
@@ -37,13 +34,10 @@ function Profile() {
                         Download Resume
                     </a>
                     <div className={styles.socials}>
-                        <a href="https://x.com/blossomscarols" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                            <img src={twitterIcon} alt="" />
-                        </a>
                         <a href="https://github.com/carolineeey?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                             <img src={githubIcon} alt="" />
                         </a>
-                        <a href="https://www.linkedin.com/in/esther-melia-cs/m" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/esther-melia-cs" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <img src={linkedinIcon} alt="" />
                         </a>
                     </div>
